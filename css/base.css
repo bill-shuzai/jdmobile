@@ -1,0 +1,100 @@
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	/*清除点击默认的高亮效果*/
+	-webkit-tap-highlight-color:transparent;
+	/*以border开始计算宽度*/
+	-webkit-box-sizing:border-box;
+}
+/*头部通栏*/
+.jd_toolBar {
+	height: 45px;
+	width: 100%;
+	background: url("../images/header-bg.png") repeat-x;
+	-webkit-background-size: 1px 44px;
+	background-size: 1px 44px;
+	border-bottom:1px solid #e0e0e0;
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* 返回按钮 */
+.jd_toolBar .icon_back {
+	background-position: -20px 0 ;
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin: 12px 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* 搜索 */
+.jd_toolBar form {
+	width: 100%;
+	height: 44px;
+	padding: 0 40px;
+	line-height: 44px;
+}
+
+/* 菜单按钮 */
+.jd_toolBar .icon_menu {
+	background-position: -60px 0 ;
+	width: 40px;
+	height: 44px;
+	display: block;
+	padding: 12px 10px;
+
+	background-origin: content-box;
+	background-clip: content-box;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+body {
+	font-size: 14px;
+	/*第二个是手机的一个默认字体*/
+	font-family: "Microsoft YaHei",sans-serif;
+	color: #000;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+input,textarea {
+	border:none;
+	resize: none;
+	/*清除选中效果*/
+	outline: none;
+	/*清除浏览器默认的样式*/
+	-webkit-apprearance:none;
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+[class^="icon_"]{
+	background: url("../images/sprites.png") no-repeat;
+	-webkit-background-size: 200px 200px;
+	background-size: 200px 200px;
+}
